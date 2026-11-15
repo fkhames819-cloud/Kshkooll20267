@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700;800&display=swap');
+:root{--navy:#101b36;--navy2:#1b315b;--blue:#2677e8;--yellow:#ffc928;--paper:#fffaf0;--ink:#18223a;--muted:#77839a;--bg:#edf2fa;--line:#dce5f1;--shadow:0 18px 48px rgba(16,27,54,.13)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Changa",Tahoma,sans-serif;line-height:1.8}a{color:var(--blue);text-decoration:none}.landing{min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 15% 20%,#315994,transparent 35%),linear-gradient(140deg,var(--navy),var(--navy2));color:white;padding:24px}.landing-wrap{max-width:760px;text-align:center}.landing-logo{width:100px;height:100px}.landing h1{font-size:clamp(36px,7vw,66px);line-height:1.35;margin:12px 0}.landing p{color:#d5e1f4}.tag{font:800 11px Arial,sans-serif;letter-spacing:2px;color:var(--blue);direction:ltr}.landing .tag{color:var(--yellow)}.primary-link{display:inline-block;margin-top:18px;padding:12px 28px;border-radius:12px;background:var(--yellow);color:var(--navy);font-weight:800}.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 5%;background:white;border-bottom:1px solid var(--line)}.site-header nav{display:flex;gap:18px}.content{max-width:1000px;margin:55px auto;padding:0 22px}.content h1{font-size:clamp(30px,5vw,48px);color:var(--navy)}.paper{margin-top:25px;padding:28px;border:1px solid #e8dfcd;border-radius:18px;background:var(--paper);background-image:repeating-linear-gradient(transparent 0,transparent 38px,#dce8f4 39px);box-shadow:var(--shadow)}.tiles{display:flex;gap:14px;flex-wrap:wrap}.tiles a{padding:18px 24px;border:1px solid var(--line);border-radius:14px;background:white;font-weight:700}@media(max-width:600px){.site-header{align-items:flex-start;gap:10px;flex-direction:column}.site-header nav{flex-wrap:wrap}.content{margin:30px auto}}
+body.dark{color-scheme:dark;--navy:#e8efff;--navy2:#b8c9e9;--paper:#17243d;--ink:#edf3ff;--muted:#a7b5cc;--bg:#0b1428;--line:#293a58;--shadow:0 18px 48px rgba(0,0,0,.24)}
+body.dark .site-header{background:rgba(17,31,56,.92);border-color:var(--line)}
+body.dark .site-header nav a{color:var(--muted)}
+body.dark .site-header nav a:hover{color:var(--blue)}
+.theme-toggle{width:44px;height:44px;flex:0 0 44px;display:inline-grid;place-items:center;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--paper,#fff);color:var(--ink);cursor:pointer;box-shadow:0 5px 14px rgba(16,27,54,.12);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.theme-toggle:hover{transform:translateY(-3px) rotate(8deg);border-color:var(--blue);box-shadow:0 9px 22px rgba(38,119,232,.22)}
+.theme-toggle:active{transform:scale(.9)}
+.theme-toggle:focus-visible{outline:3px solid #2677e866;outline-offset:3px}
+.theme-toggle-icon{width:21px;height:21px;display:block;object-fit:contain;transition:transform .35s ease,opacity .2s ease}
+.theme-toggle-icon.is-animating{animation:themeIconPop .48s cubic-bezier(.2,.8,.2,1)}
+@keyframes themeIconPop{0%{transform:rotate(-100deg) scale(.35);opacity:.2}65%{transform:rotate(18deg) scale(1.2);opacity:1}100%{transform:rotate(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){.theme-toggle,.theme-toggle-icon{transition:none}.theme-toggle-icon.is-animating{animation:none}}
+
+
+/* Unified Kshkooll identity */
+.kshkooll-brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);font-weight:800}
+.brand-logo-mark{width:42px;height:42px;flex:0 0 42px;object-fit:contain;border-radius:12px}
+.site-brand .brand-logo-mark{width:40px;height:40px;flex-basis:40px}
+.brand-name{font-weight:800;letter-spacing:.2px}
+.landing-logo{width:112px;height:112px;object-fit:contain}
+
+/* Kshkooll dark visual system */
+body.dark{
+  --navy:#f0f5ff;
+  --navy2:#c8d8f4;
+  --blue:#79adff;
+  --yellow:#ffd45c;
+  --paper:#172640;
+  --ink:#edf4ff;
+  --muted:#a9bad4;
+  --bg:#091326;
+  --line:#2a3d5d;
+  --shadow:0 18px 44px rgba(0,0,0,.28);
+  background:
+    radial-gradient(ellipse at 12% 0%,rgba(39,100,183,.16),transparent 38%),
+    radial-gradient(ellipse at 95% 30%,rgba(27,68,127,.12),transparent 34%),
+    var(--bg);
+  color:var(--ink);
+}
+body.dark .site-header{
+  background:rgba(12,25,46,.88);
+  border-color:var(--line);
+  box-shadow:0 8px 28px rgba(0,0,0,.16);
+}
+body.dark .site-header a,
+body.dark .kshkooll-brand{color:var(--ink)}
+body.dark .site-header nav a{color:var(--muted)}
+body.dark .site-header nav a:hover{color:var(--blue)}
+body.dark .content h1,
+body.dark .content h2,
+body.dark .content h3{color:var(--ink)}
+body.dark .content>p:not(.tag){color:var(--muted)}
+body.dark .paper,
+body.dark .tiles a{
+  color:var(--ink);
+  background:#14243e;
+  background-image:none;
+  border-color:var(--line);
+  box-shadow:var(--shadow);
+}
+body.dark .tag{color:var(--blue)}
+body.dark .theme-toggle{
+  color:var(--ink);
+  background:#172b49;
+  border-color:var(--line);
+  box-shadow:0 6px 18px rgba(0,0,0,.24);
+}
+body.dark input,
+body.dark textarea,
+body.dark select{
+  color:var(--ink);
+  background:#101f38;
+  border-color:var(--line);
+}
+body.dark input::placeholder,
+body.dark textarea::placeholder{color:#91a5c3;opacity:1}
+body.dark ::selection{background:#315f9c;color:#fff}
+
+
+/* Shared Kshkooll student sidebar — hidden until requested on every screen */
+.student-sidebar{position:fixed;z-index:1001;inset:0 0 0 auto;width:264px;padding:24px 17px 18px;background:#fff;border-left:1px solid var(--line);box-shadow:0 12px 38px rgba(16,27,54,.10);display:flex;flex-direction:column;gap:18px;overflow-y:auto;transform:translateX(110%);visibility:hidden;transition:transform .25s ease,visibility .25s ease}
+body.dark .student-sidebar{background:#0e1c33;border-color:var(--line);box-shadow:0 12px 38px rgba(0,0,0,.28)}
+body.sidebar-open .student-sidebar{transform:translateX(0);visibility:visible}
+.sidebar-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 5px 17px;border-bottom:1px solid var(--line)}
+.sidebar-brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-size:19px;font-weight:800}
+.sidebar-brand img{width:39px;height:39px;object-fit:contain}
+.sidebar-close{display:block;border:0;background:transparent;color:var(--muted);font-size:27px;cursor:pointer}
+.sidebar-caption{margin:0 8px -8px;color:var(--muted);font-size:12px;font-weight:700}
+.sidebar-nav{display:flex;flex-direction:column;gap:7px}
+.sidebar-link{display:flex;align-items:center;gap:12px;padding:11px 12px;border:1px solid transparent;border-radius:12px;color:var(--muted);font-weight:600;transition:background .2s,color .2s,border-color .2s}
+.sidebar-link:hover{background:#edf4ff;color:#246bd0}
+.sidebar-link.active{background:#eaf2ff;border-color:#d7e6ff;color:#1e63c5;font-weight:800}
+body.dark .sidebar-link:hover{background:#172c4b;color:#a9caff}
+body.dark .sidebar-link.active{background:#1a3559;border-color:#31537f;color:#a9caff}
+.sidebar-link-icon{width:30px;height:30px;display:grid;place-items:center;flex:0 0 30px;border-radius:9px;background:#f0f4fa;color:#52739e;font-size:13px;font-weight:800;direction:ltr}
+.sidebar-link.active .sidebar-link-icon{background:#d7e7ff;color:#1e63c5}
+body.dark .sidebar-link-icon{background:#1a2d49;color:#a9bad4}
+body.dark .sidebar-link.active .sidebar-link-icon{background:#284a75;color:#c4dcff}
+.sidebar-bottom{margin-top:auto;padding:15px 8px 0;border-top:1px solid var(--line);color:var(--muted);font:700 9px Arial,sans-serif;letter-spacing:1.5px;direction:ltr}
+.sidebar-dot{display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:#36b783}
+.sidebar-menu-button{display:grid;place-items:center;position:fixed;z-index:1002;top:14px;right:14px;width:48px;height:48px;padding:5px;border:1px solid var(--line);border-radius:13px;background:var(--paper);box-shadow:0 5px 18px rgba(0,0,0,.14);cursor:pointer}
+.sidebar-menu-logo{display:block;width:100%;height:100%;object-fit:contain;border-radius:9px}
+.sidebar-backdrop{display:none}
+.sidebar-backdrop:not([hidden]){display:block;position:fixed;z-index:1000;inset:0;background:rgba(3,10,22,.56)}
+body.has-student-sidebar{padding-right:0}
+body.sidebar-open{overflow:hidden}
+@media(max-width:760px){
+  .student-sidebar{width:min(290px,86vw)}
+  /* Compact mobile header: keep the brand visible and remove crowded text links. */
+  .site-header{flex-direction:row;align-items:center;justify-content:space-between;padding:12px 16px;min-height:72px}
+  .site-header nav{display:flex;align-items:center;gap:8px;flex-wrap:nowrap}
+  .site-header nav a{display:none}
+  .site-header .site-brand{display:inline-flex;align-items:center;min-height:44px;font-size:17px}
+  .site-header .site-brand .brand-logo-mark{width:38px;height:38px;flex-basis:38px}
+  .site-header .theme-toggle{width:40px;height:40px;flex-basis:40px}
+}
+
+/* Header is reduced to logo, personal profile shortcut, and theme switch. */
+body.has-student-sidebar .site-header{position:relative;min-height:76px;padding-inline:18px}
+body.has-student-sidebar .site-header nav a{display:none}
+body.has-student-sidebar .site-header nav{display:none}
+body.has-student-sidebar .site-header .theme-toggle{position:fixed;top:16px;right:126px;z-index:1003}
+.header-profile-link{position:fixed;top:14px;right:70px;z-index:1003;width:48px;height:48px;display:grid;place-items:center;border:1px solid var(--line);border-radius:13px;background:var(--paper);color:var(--ink);font-size:25px;box-shadow:0 5px 18px rgba(0,0,0,.12)}
+.header-profile-link:hover{color:var(--blue);border-color:var(--blue)}
+.sidebar-logout{width:100%;border:0;background:transparent;text-align:right;font:inherit;cursor:pointer}
+.sidebar-logout::before{content:"↪";width:30px;height:30px;display:grid;place-items:center;flex:0 0 30px;border-radius:9px;background:#f0f4fa;color:#52739e;font-weight:800}
+@media(max-width:760px){
+  body.has-student-sidebar .site-header .theme-toggle{right:126px;top:16px}
+  .header-profile-link{right:70px;top:14px}
+}
+
+/* Align the three header controls at the far left; the brand itself toggles the sidebar. */
+body.has-student-sidebar .site-header{justify-content:flex-start}
+body.has-student-sidebar .site-header .site-brand,
+body.has-student-sidebar .site-header .kshkooll-brand{position:fixed;top:14px;left:14px;right:auto;z-index:1003;min-height:48px}
+body.has-student-sidebar .site-header .theme-toggle{position:fixed;top:16px;left:126px;right:auto;z-index:1003}
+body.has-student-sidebar .header-profile-link{position:fixed;top:14px;left:70px;right:auto;z-index:1003}
+@media(max-width:760px){
+  body.has-student-sidebar .site-header .site-brand,
+  body.has-student-sidebar .site-header .kshkooll-brand{left:14px;right:auto}
+  body.has-student-sidebar .site-header .theme-toggle{left:126px;right:auto;top:16px}
+  body.has-student-sidebar .header-profile-link{left:70px;right:auto;top:14px}
+}
+
+/* Keep the brand logo alone at the far right; profile and theme controls stay on the left. */
+body.has-student-sidebar .site-header .site-brand,
+body.has-student-sidebar .site-header .kshkooll-brand{left:auto;right:14px}
+@media(max-width:760px){
+  body.has-student-sidebar .site-header .site-brand,
+  body.has-student-sidebar .site-header .kshkooll-brand{left:auto;right:14px}
+}
+
+
+/* Hide the header logo while the sidebar is open. */
+body.sidebar-open .site-header .site-brand,
+body.sidebar-open .site-header .kshkooll-brand{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,visibility .18s ease}
+
+
+/* Move the left-side header controls to the extreme left. */
+body.has-student-sidebar .site-header .theme-toggle{left:14px;right:auto}
+body.has-student-sidebar .header-profile-link{left:70px;right:auto}
+@media(max-width:760px){
+  body.has-student-sidebar .site-header .theme-toggle{left:14px;right:auto}
+  body.has-student-sidebar .header-profile-link{left:70px;right:auto}
+}
+
+
+/* Phone layout: fixed, compact controls with no dependence on header/nav flow. */
+@media screen and (max-width:600px){
+  body.has-student-sidebar .site-header{position:relative!important;min-height:64px!important;padding:8px 12px!important;display:block!important}
+  body.has-student-sidebar .site-header .site-brand,
+  body.has-student-sidebar .site-header .kshkooll-brand{
+    position:fixed!important;top:10px!important;right:12px!important;left:auto!important;
+    width:42px!important;height:42px!important;min-height:42px!important;
+    display:grid!important;place-items:center!important;gap:0!important;
+    padding:0!important;margin:0!important;font-size:0!important;z-index:1004!important;
+  }
+  body.has-student-sidebar .site-header .site-brand .brand-logo-mark,
+  body.has-student-sidebar .site-header .kshkooll-brand .brand-logo-mark{
+    display:block!important;width:40px!important;height:40px!important;flex:none!important;
+  }
+  body.has-student-sidebar .site-header .site-brand span,
+  body.has-student-sidebar .site-header .kshkooll-brand span{display:none!important}
+  body.has-student-sidebar .site-header .theme-toggle{
+    position:fixed!important;top:11px!important;left:12px!important;right:auto!important;
+    width:40px!important;height:40px!important;z-index:1004!important;
+  }
+  body.has-student-sidebar .header-profile-link{
+    position:fixed!important;top:10px!important;left:62px!important;right:auto!important;
+    width:42px!important;height:42px!important;z-index:1004!important;
+  }
+  body.sidebar-open .site-header .site-brand,
+  body.sidebar-open .site-header .kshkooll-brand{opacity:0!important;visibility:hidden!important}
+}
+
+
+
+/* SVG icon system and restrained micro-interactions */
+.ui-icon{width:21px;height:21px;display:block;flex:0 0 auto;fill:currentColor;stroke:none;overflow:visible;transition:transform .22s ease,opacity .22s ease}
+.sidebar-link-icon .ui-icon{width:19px;height:19px}
+.sidebar-link:hover .ui-icon,.header-profile-link:hover .ui-icon,.sidebar-close:hover .ui-icon{animation:kshIconNudge .48s ease both}
+.header-profile-link .ui-icon{width:22px;height:22px}
+.sidebar-close{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--muted);cursor:pointer}
+.sidebar-close .ui-icon{width:18px;height:18px}
+.header-profile-link{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.header-profile-link:hover{transform:translateY(-2px);border-color:var(--blue);box-shadow:0 8px 20px rgba(38,119,232,.18)}
+@keyframes kshIconNudge{0%{transform:scale(1) rotate(0)}35%{transform:scale(1.16) rotate(-8deg)}70%{transform:scale(.96) rotate(5deg)}100%{transform:scale(1) rotate(0)}}
+.theme-toggle-icon{transform-origin:50% 50%}
+.theme-toggle-icon.is-animating{animation:themeIconPop .52s cubic-bezier(.2,.8,.2,1)}
+@media(prefers-reduced-motion:reduce){.ui-icon,.header-profile-link{transition:none}.sidebar-link:hover .ui-icon,.header-profile-link:hover .ui-icon,.sidebar-close:hover .ui-icon,.theme-toggle-icon.is-animating{animation:none}}
